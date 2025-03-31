@@ -1,2 +1,5 @@
-# poppy_moveit
-Poppy Moveit JointController
+# Poppy Moveit JointController
+
+## Work In Progress
+
+![Rviz Sim](misc/output.gif)
