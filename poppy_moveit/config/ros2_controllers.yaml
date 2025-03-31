@@ -1,0 +1,105 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    poppy_left_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    poppy_right_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    poppy_left_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    poppy_right_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    poppy_body_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    head_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+poppy_left_arm_controller:
+  ros__parameters:
+    joints:
+      - l_shoulder_y
+      - l_shoulder_x
+      - l_arm_z
+      - l_elbow_y
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+poppy_right_arm_controller:
+  ros__parameters:
+    joints:
+      - r_shoulder_y
+      - r_shoulder_x
+      - r_arm_z
+      - r_elbow_y
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+poppy_left_leg_controller:
+  ros__parameters:
+    joints:
+      - l_hip_x
+      - l_hip_z
+      - l_hip_y
+      - l_knee_y
+      - l_ankle_y
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+poppy_right_leg_controller:
+  ros__parameters:
+    joints:
+      - r_hip_x
+      - r_hip_z
+      - r_hip_y
+      - r_knee_y
+      - r_ankle_y
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+poppy_body_controller:
+  ros__parameters:
+    joints:
+      - abs_y
+      - abs_x
+      - abs_z
+      - bust_y
+      - bust_x
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+head_controller:
+  ros__parameters:
+    joints:
+      - head_z
+      - head_y
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

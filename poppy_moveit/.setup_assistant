@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: poppy
+    relative_path: urdf/Poppy_Humanoid.URDF
+  srdf:
+    relative_path: config/Poppy_Humanoid.srdf
+  package_settings:
+    author_name: nil
+    author_email: nilanjan.c@octobotics.tech
+    generated_timestamp: 1727774102
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

@@ -1,0 +1,68 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - poppy_left_arm_controller
+    - poppy_right_arm_controller
+    - poppy_left_leg_controller
+    - poppy_right_leg_controller
+    - poppy_body_controller
+    - head_controller
+
+  poppy_left_arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - l_shoulder_y
+      - l_shoulder_x
+      - l_arm_z
+      - l_elbow_y
+  poppy_right_arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - r_shoulder_y
+      - r_shoulder_x
+      - r_arm_z
+      - r_elbow_y
+  poppy_left_leg_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - l_hip_x
+      - l_hip_z
+      - l_hip_y
+      - l_knee_y
+      - l_ankle_y
+  poppy_right_leg_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - r_hip_x
+      - r_hip_z
+      - r_hip_y
+      - r_knee_y
+      - r_ankle_y
+  poppy_body_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - abs_y
+      - abs_x
+      - abs_z
+      - bust_y
+      - bust_x
+  head_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - head_z
+      - head_y
